@@ -1,44 +1,16 @@
 import { useState } from 'react';
 import logo from '@/assets/logo.svg';
-import './Top.css';
 
 const Top: React.VFC = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <main className="content-center mx-auto">
+      <div className="px-4 py-4 font-extrabold">
+        <img src={logo} className="mx-auto w-1/4 h-1/4 animate-spin-logo" alt="logo" />
+        <p className="text-center my-5 text-4xl text-blue-500">React+Tailwind CSS</p>
+      </div>
+    </main>
   );
 };
 

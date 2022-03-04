@@ -1,6 +1,4 @@
 const { join } = require('path');
-const BASE_DIR = join(__dirname, 'src');
-const TSX_FILE = join('**', '*.tsx');
 
 module.exports = {
   future: {
@@ -9,11 +7,21 @@ module.exports = {
   },
   purge: {
     enabled: process.env.NODE_ENV === 'production',
-    content: [join(BASE_DIR, TSX_FILE), join(__dirname, '*.html')],
+    content: ['src/**/*.{ts,tsx}', 'index.html'],
   },
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-logo': 'spin-logo 10s ease-in-out infinite',
+      },
+      keyframes: {
+        'spin-logo': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+      },
+    },
   },
-  plugins: [],
+  plugins: [require('tailwindcss'), require('autoprefixer')],
 };
