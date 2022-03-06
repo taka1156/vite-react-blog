@@ -1,11 +1,7 @@
-
-type TextProps = {
+export interface TextProps {
     text: string;
 }
 
-const BaseText: React.VFC<TextProps> = ({text}) => {
+export const BaseBtn: React.VFC<TextProps> = ({text}) => {
     return (<p>{text}</p>)
 }
-
-
-export default BaseText;

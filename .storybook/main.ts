@@ -11,7 +11,7 @@ interface CustomizedStorybookConfig extends Weaken<StorybookConfig, 'core'> {
 }
 
 const config: CustomizedStorybookConfig = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.mdx', '../src/components/**/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   core: {
     builder: 'storybook-builder-vite',
@@ -20,6 +20,10 @@ const config: CustomizedStorybookConfig = {
     if (process.env.NODE_ENV === 'production') {
       config.build.chunkSizeWarningLimit = 1200;
     }
+    config.plugins = [
+      ...config.plugins,
+      require('@vitejs/plugin-react')
+    ]
     return config;
   },
 };

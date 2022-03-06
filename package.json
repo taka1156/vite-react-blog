@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "analyze": "vite build --mode analyze",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build:sb": "build-storybook"
   },
   "dependencies": {
     "axios": "^0.26.0",

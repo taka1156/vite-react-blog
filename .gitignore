@@ -24,5 +24,8 @@ dist-ssr
 *.sw?
 .env
 node_modules/
+
+# output
 dist/
 analyze/
+storybook-static
