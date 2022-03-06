@@ -19,6 +19,7 @@ const config: CustomizedStorybookConfig = {
   viteFinal: (config) => {
     if (process.env.NODE_ENV === 'production') {
       config.build.chunkSizeWarningLimit = 1200;
+      config.base = '/vite-react-blog/';
     }
     config.plugins = [
       ...config.plugins,
