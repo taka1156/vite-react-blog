@@ -2,6 +2,6 @@ export interface TextProps {
     text: string;
 }
 
-export const BaseBtn: React.VFC<TextProps> = ({text}) => {
-    return (<p>{text}</p>)
+export const BaseText: React.VFC<TextProps> = ({text}) => {
+    return (<p className="text-xl">{text}</p>)
 }

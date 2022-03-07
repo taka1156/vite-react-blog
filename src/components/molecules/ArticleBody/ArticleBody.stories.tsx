@@ -1,5 +1,4 @@
 import { marked } from 'marked';
-import '../../../../node_modules/github-markdown-css/github-markdown-css-light.css';
 
 type Props = { body: string };
 

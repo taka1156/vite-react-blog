@@ -32,3 +32,11 @@ type Article = ArticleDate & {
   category: ArticleCategory;
   related_blogs?: Article[];
 };
+
+
+type MicroCMSResult = {
+  comments: Article[];
+  totalCount: number;
+  offset: number;
+  limit: number;
+}

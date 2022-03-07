@@ -1,15 +1,12 @@
-const { join } = require('path');
-
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: ['src/**/*.{ts,tsx}', 'index.html'],
-  },
-  content: [],
+  mode: 'jit',
+  content: ['src/**/**/**/*.{ts,tsx}', 'index.html'],
+  // // purge: {
+  // //   enabled: process.env.NODE_ENV === 'production',
+  // //   options: {
+  // //     safelist: ['text-base', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl', 'text-6xl']
+  // //   }
+  // // },
   theme: {
     extend: {
       animation: {

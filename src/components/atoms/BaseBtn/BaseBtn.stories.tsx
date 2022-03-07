@@ -7,21 +7,13 @@ const defaultArgs: BtnProps = {
   text: 'button',
   fn: () => action('ignite'),
   outlined: false,
-  size: 'small',
+  rounded: false,
+  size: 'sm',
 };
 
 export default {
   component: BaseBtn,
   title: 'Atoms/BaseBtn',
-  argTypes: {
-    type: { controle: { type: 'inline-radio', options: ['button', 'submit'] } },
-    text: 'button',
-    outlined: {
-      controle: {
-        type: 'boolean',
-      },
-    },
-  },
   args: {
     fn: () => action('ignite'),
   },
