@@ -24,7 +24,7 @@ const config: CustomizedStorybookConfig = {
     builder: 'storybook-builder-vite',
   },
   viteFinal: (config) => {
-    config.resolve.alias = { '@': resolve(__dirname, './src') };
+    config.resolve.alias = { '@': resolve(__dirname, '../src') };
     if (process.env.NODE_ENV === 'production') {
       config.build.chunkSizeWarningLimit = 1200;
       config.base = '/vite-react-blog/';
