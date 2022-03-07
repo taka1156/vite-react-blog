@@ -1,7 +1,7 @@
-import { BaseHeading } from '../../Atoms/BaseHeading/BaseHeading';
-import { BaseText } from '../../Atoms/BaseText/BaseText';
-import { Category } from '../../molecules/ArticleCategory/ArticleCategory';
-import { Tags } from '../../molecules/ArticleTags/ArticleTags';
+import { BaseHeading } from '@/components/Atoms/BaseHeading/BaseHeading';
+import { BaseText } from '@/components/Atoms/BaseText/BaseText';
+import { Category } from '@/components/molecules/ArticleCategory/ArticleCategory';
+import { Tags } from '@/components/molecules/ArticleTags/ArticleTags';
 
 type ArticleProps = {
   article: Article;

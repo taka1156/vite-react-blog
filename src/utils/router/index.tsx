@@ -1,7 +1,7 @@
-import { Top } from '../../views/Top/Top';
-import { Category } from '../../views/Category/Category';
-import { Tag } from '../../views/Tag/Tag';
-import { Profile } from '../../views/Profile/Profile';
+import { Top } from '@/views/Top/Top';
+import { Category } from '@/views/Category/Category';
+import { Tag } from '@/views/Tag/Tag';
+import { Profile } from '@/views/Profile/Profile';
 
 export const router = [
   {

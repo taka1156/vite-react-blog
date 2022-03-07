@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
@@ -17,13 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src/**/**/*.ts", "src/**/**/*.tsx", "vite-env.d.ts"],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
-  "paths": {
-    "@/*": ["./src/*"]
-  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "vite-env.d.ts"],
+
 }

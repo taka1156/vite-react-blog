@@ -1,4 +1,4 @@
-import { BaseHeading } from '../../components/Atoms/BaseHeading/BaseHeading';
+import { BaseHeading } from '@/components/Atoms/BaseHeading/BaseHeading';
 
 export const Top: React.VFC = () => {
   return <main className="content-center mx-auto">

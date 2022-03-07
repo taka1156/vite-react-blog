@@ -1,4 +1,4 @@
-import { BaseHeading } from '../../components/Atoms/BaseHeading/BaseHeading';
+import { BaseHeading } from '@/components/Atoms/BaseHeading/BaseHeading';
 import logo from '@/assets/logo.svg';
 
 export const Profile: React.VFC = () => {
