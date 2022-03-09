@@ -10,7 +10,7 @@ export interface HeadingProps {
 }
 
 const headingFontSize = (h: HeadingLevel = 1) => {
-  const HeadingSize = ['text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl', 'text-6xl'].reverse();
+  const HeadingSize = ['text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl'].reverse();
   return `${HeadingSize[h - 1]}`;
 };
 

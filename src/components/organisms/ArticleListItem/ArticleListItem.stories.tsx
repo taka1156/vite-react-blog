@@ -2,8 +2,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 import { MemoryRouter } from 'react-router';
 import { ArticleListItem, ListItemProps } from './ArticleListItem';
 
-const templateTag = (i: number): ArticleTag => {
-  return {
+const templateTag = (i: number): ArticleTag => ({
     id: `dummy-${i}`,
     name: `duumyTag${i}`,
     img: {
@@ -11,8 +10,7 @@ const templateTag = (i: number): ArticleTag => {
     },
     createdAt: '2022/1/1',
     updatedAt: '2022/12/31',
-  };
-};
+});
 
 const dummyMarkdown = `
 ## この文章はダミーです。
@@ -48,7 +46,7 @@ const templateArticle = (i: number):Article => ({
 });
 
 const factory = (n: number, tamplate: Function) => {
-  return new Array(n).map((_, i) => tamplate(i));
+  return [...new Array(n)].map((_, i) => tamplate(i));
 };
 
 const defaultArgs: ListItemProps = {
@@ -57,7 +55,7 @@ const defaultArgs: ListItemProps = {
 
 export default {
   component: ArticleListItem,
-  title: 'Molecules/ArticleList',
+  title: 'Molecules/ArticleListItem',
 } as Meta<typeof ArticleListItem>;
 
 const Template: ComponentStory<typeof ArticleListItem> = (

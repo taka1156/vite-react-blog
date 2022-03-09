@@ -5,7 +5,7 @@ import { ArticleCategory, CategoryProps } from './ArticleCategory';
 const defaultArgs: CategoryProps = {
   category: {
     id: 'dummy-id',
-    name: 'duumyTag',
+    name: 'duumyCategory',
     img: {
         url: 'http://placehold.jp/150x150.png'
     },
