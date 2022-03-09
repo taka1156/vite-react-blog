@@ -1,6 +1,6 @@
-import { BaseText } from '@/components/Atoms/BaseText/BaseText';
-import { BaseImg } from '@/components/Atoms/BaseImg/BaseImg';
-import { BaseLink } from '@/components/Atoms/BaseLink/BaseLink';
+import { BaseText } from '@/components/atoms/BaseText/BaseText';
+import { BaseImg } from '@/components/atoms/BaseImg/BaseImg';
+import { BaseLink } from '@/components/atoms/BaseLink/BaseLink';
 
 export interface TagsProps {
   tags: ArticleTag[];

@@ -1,5 +1,5 @@
-import { BaseHeading } from '@/components/Atoms/BaseHeading/BaseHeading';
-import { BaseText } from '@/components/Atoms/BaseText/BaseText';
+import { BaseHeading } from '@/components/atoms/BaseHeading/BaseHeading';
+import { BaseText } from '@/components/atoms/BaseText/BaseText';
 import { ArticleCategory } from '@/components/molecules/ArticleCategory/ArticleCategory';
 import { ArticleTags } from '@/components/molecules/ArticleTags/ArticleTags';
 
