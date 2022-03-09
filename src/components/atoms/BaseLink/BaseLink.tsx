@@ -1,15 +1,27 @@
-import { Route, useLocation } from 'react-router-dom';
+import classNames from 'classnames';
+import { Link, useLocation } from 'react-router-dom';
 
 export interface LinkProps {
-  cp: JSX.Element
+  cp: JSX.Element;
   link: string;
-};
+  className?: string;
+}
 
-export const BaseLink: React.VFC<LinkProps> = ({ cp, link }) => {
-  if(link.indexOf('http') !== -1) { 
-    return (<a href={link}>{cp}</a>);
+export const BaseLink: React.VFC<LinkProps> = ({ cp, link, className='' }) => {
+  const style = classNames(className);
+
+  if (link.indexOf('http') !== -1) {
+    return (
+      <a href={link} className={style}>
+        {cp}
+      </a>
+    );
   } else {
     const location = useLocation();
-    return (<Route path={`${location.pathname}/${link}`}>{cp}</Route>)
+    return (
+      <Link to={`${location.pathname}/${link}`} className={style}>
+        {cp}
+      </Link>
+    );
   }
 };

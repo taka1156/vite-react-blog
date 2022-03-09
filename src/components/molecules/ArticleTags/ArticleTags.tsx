@@ -6,14 +6,14 @@ export interface TagsProps {
   tags: ArticleTag[];
 }
 
-export const Tags: React.FC<TagsProps> = ({ tags }) => {
-  
+export const ArticleTags: React.FC<TagsProps> = ({ tags }) => {
+  console.log(tags);
 
   const tagCp = ({ name, img }: ArticleTag) => {
     const { url } = img;
 
     return (
-      <div className="flex">
+      <div className="flex justify-between">
         <BaseText text={name} />
         <BaseImg img={url} alt={`${name}のロゴ`} size={'sm'} />
       </div>

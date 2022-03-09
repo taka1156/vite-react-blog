@@ -1,14 +1,14 @@
 type ArticleDate = {
   createdAt: string;
   updatedAt: string;
-  publishedAt: string;
-  revisedAt: string;
+  publishedAt?: string;
+  revisedAt?: string;
 };
 
 type ArticleImg = {
   url: string;
-  height: number;
-  width: number;
+  height?: number;
+  width?: number;
 };
 
 type ArticleTag = ArticleDate & {

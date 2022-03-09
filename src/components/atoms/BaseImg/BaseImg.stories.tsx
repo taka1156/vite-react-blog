@@ -2,7 +2,7 @@ import { Meta, ComponentStory } from '@storybook/react';
 import { BaseImg, ImgProps } from './BaseImg';
 
 const defaultArgs: ImgProps = {
-  img: 'http://placehold.jp/150x150.pn',
+  img: 'http://placehold.jp/150x150.png',
   alt: 'ダミー画像',
   size: 'sm',
 };

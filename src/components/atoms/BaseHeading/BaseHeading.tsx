@@ -6,6 +6,7 @@ export interface HeadingProps {
   hLv: HeadingLevel;
   text: string;
   underlined?: boolean;
+  className?: string;
 }
 
 const headingFontSize = (h: HeadingLevel = 1) => {
@@ -17,10 +18,12 @@ export const BaseHeading: React.FC<HeadingProps> = ({
   text,
   hLv = 1,
   underlined = false,
+  className = ''
 }) => {
   const HeadingTag = `h${hLv}` as React.ElementType;
   const headingClass = classNames(headingFontSize(Number(hLv) as HeadingLevel), {
     'border-b-4 border-indigo-400 pb-2': underlined,
+    className
   });
   return <HeadingTag className={headingClass}>{text}</HeadingTag>;
 };

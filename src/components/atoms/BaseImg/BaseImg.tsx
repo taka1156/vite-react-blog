@@ -6,19 +6,21 @@ export interface ImgProps {
   img: string;
   alt: string;
   size: ImgSize;
+  className?: string;
 }
 
 const imgSizeStyle = (size: ImgSize) => {
   switch (size) {
     case 'sm':
-      return 'w-8 h-8';
+      return 'w-10 h-10';
     case 'lg':
-      return 'w-16 h-16';
+      return 'w-18 h-18';
     default:
-      return '';
+      return 'w-14 h-14';
   }
 };
 
-export const BaseImg: React.FC<ImgProps> = ({ img, alt, size = 'sm' }) => {
-  return <img src={img} alt={alt} className={imgSizeStyle(size)} />;
+export const BaseImg: React.FC<ImgProps> = ({ img, alt, size = 'sm', className = '' }) => {
+  const style = classNames(imgSizeStyle(size), className);
+  return <img src={img} alt={alt} className={style} />;
 };

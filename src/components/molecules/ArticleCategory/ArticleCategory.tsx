@@ -6,14 +6,20 @@ export interface CategoryProps {
   category: ArticleCategory;
 }
 
-export const Category: React.FC<CategoryProps> = ({ category }) => {
+export const ArticleCategory: React.FC<CategoryProps> = ({ category }) => {
   const { id, name, img } = category;
   const { url } = img;
 
   const categoryCp = (
     <div className="flex">
-      <BaseText text={name} />
-      <BaseImg img={url} alt={`${name}のロゴ`} size={'lg'} />
+      <div className="flex justify-between p-4 border-2 border-blue-500 rounded-lg">
+        <div>
+          <BaseText text={name} />
+        </div>
+        <div>
+          <BaseImg img={url} alt={`${name}のロゴ`} size={'sm'} />
+        </div>
+      </div>
     </div>
   );
 

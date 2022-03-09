@@ -1,10 +1,10 @@
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 
-type ArticleProps = {
+export interface ListProps {
   articleList: Article[];
 };
 
-export const ArticleList: React.FC<ArticleProps> = ({ articleList }) => {
+export const ArticleList: React.VFC<ListProps> = ({ articleList }) => {
   return (
     <>
       {articleList.map((article) => (
