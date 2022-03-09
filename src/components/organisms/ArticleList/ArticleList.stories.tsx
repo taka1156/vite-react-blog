@@ -36,7 +36,7 @@ const templateArticle = (i: number) => ({
   tags: factory(5, templateTag),
   category: {
     id: 'dummy-id',
-    name: 'duumyTag',
+    name: 'duumyCategory',
     img: {
       url: 'http://placehold.jp/150x150.png',
     },
