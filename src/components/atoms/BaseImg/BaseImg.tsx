@@ -12,11 +12,11 @@ export interface ImgProps {
 const imgSizeStyle = (size: ImgSize) => {
   switch (size) {
     case 'sm':
-      return 'w-10 h-10';
+      return 'w-8 h-8';
     case 'lg':
-      return 'w-18 h-18';
+      return 'w-15 h-15';
     default:
-      return 'w-14 h-14';
+      return 'w-10 h-10';
   }
 };
 

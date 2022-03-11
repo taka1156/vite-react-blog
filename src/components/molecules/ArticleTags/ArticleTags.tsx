@@ -1,29 +1,15 @@
-import { BaseText } from '@/components/atoms/BaseText/BaseText';
-import { BaseImg } from '@/components/atoms/BaseImg/BaseImg';
-import { BaseLink } from '@/components/atoms/BaseLink/BaseLink';
+import { ArticleTag } from '@/components/molecules/ArticleTag/ArticleTag';
 
 export interface TagsProps {
   tags: ArticleTag[];
   className?: string;
 }
 
-export const ArticleTags: React.FC<TagsProps> = ({ tags, className="" }) => {
-  
-  const tagCp = ({ name, img }: ArticleTag) => {
-    const { url } = img;
-
-    return (
-      <div className="flex justify-between">
-        <BaseText text={name} className="p-1" />
-        <BaseImg img={url} alt={`${name}のロゴ`} size={'sm'} className="p-1" />
-      </div>
-    );
-  };
-
+export const ArticleTags: React.FC<TagsProps> = ({ tags, className = '' }) => {
   return (
-    <div className={"flex justify-start " + className}>
+    <div className={'flex flex-wrap ' + className}>
       {tags.map((tag) => (
-        <BaseLink cp={tagCp(tag)} link={`tag/${tag.id}`} className="m-1 p-1 border-2 border-blue-500 rounded-full"></BaseLink>
+        <ArticleTag tag={tag} className='m-1' />
       ))}
     </div>
   );

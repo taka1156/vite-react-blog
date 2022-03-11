@@ -1,6 +1,6 @@
 import { Meta, ComponentStory } from '@storybook/react';
 import { MemoryRouter } from 'react-router';
-import { ArticleListItem, ListItemProps } from './ArticleListItem';
+import { ArticleHeader, HeaderProps } from './ArticleHeader';
 
 const templateTag = (i: number): ArticleTag => ({
     id: `dummy-${i}`,
@@ -49,18 +49,18 @@ const factory = (n: number, tamplate: Function) => {
   return [...new Array(n)].map((_, i) => tamplate(i));
 };
 
-const defaultArgs: ListItemProps = {
+const defaultArgs: HeaderProps = {
   article: templateArticle(1),
 };
 
 export default {
-  component: ArticleListItem,
-  title: 'Molecules/ArticleListItem',
-} as Meta<typeof ArticleListItem>;
+  component: ArticleHeader,
+  title: 'Molecules/ArticleHeader',
+} as Meta<typeof ArticleHeader>;
 
-const Template: ComponentStory<typeof ArticleListItem> = (
-  args: ListItemProps
-) => <MemoryRouter initialEntries={['/', 'article', 'fnuhudhvufj']}><ArticleListItem {...args} /></MemoryRouter>;
+const Template: ComponentStory<typeof ArticleHeader> = (
+  args: HeaderProps
+) => <MemoryRouter initialEntries={['/', 'article', 'fnuhudhvufj']}><ArticleHeader {...args} /></MemoryRouter>;
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };

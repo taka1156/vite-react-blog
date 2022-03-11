@@ -9,21 +9,16 @@ export interface HeadingProps {
   className?: string;
 }
 
-const headingFontSize = (h: HeadingLevel = 1) => {
-  const HeadingSize = ['text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl', 'text-5xl'].reverse();
-  return `${HeadingSize[h - 1]}`;
-};
-
 export const BaseHeading: React.FC<HeadingProps> = ({
   text,
   hLv = 1,
   underlined = false,
-  className = ''
+  className = '',
 }) => {
   const HeadingTag = `h${hLv}` as React.ElementType;
-  const headingClass = classNames(headingFontSize(Number(hLv) as HeadingLevel), {
-    'border-b-4 border-indigo-400 pb-2': underlined,
+  const headingClass = classNames(
+    {'border-b-2 border-indigo-400 pb-2': underlined},
     className
-  });
+  );
   return <HeadingTag className={headingClass}>{text}</HeadingTag>;
 };

@@ -4,11 +4,11 @@ import { BaseText } from '@/components/atoms/BaseText/BaseText';
 import { ArticleCategory } from '@/components/molecules/ArticleCategory/ArticleCategory';
 import { ArticleTags } from '@/components/molecules/ArticleTags/ArticleTags';
 
-export interface ListItemProps {
+export interface HeaderProps {
   article: Article;
 }
 
-export const ArticleListItem: React.FC<ListItemProps> = ({ article }) => {
+export const ArticleHeader: React.FC<HeaderProps> = ({ article }) => {
   const { id, title, summary, tags, category } = article;
   return (
     <div className="flex justify-center">

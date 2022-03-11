@@ -1,6 +1,6 @@
 import { Meta, ComponentStory } from '@storybook/react';
 import { MemoryRouter } from 'react-router';
-import { ArticleTags, TagsProps } from './ArticleTags';
+import { ArticleTag, TagProps } from './ArticleTag';
 
 const templateTag = (i: number): ArticleTag => ({
   id: `dummy-${i}`,
@@ -12,22 +12,18 @@ const templateTag = (i: number): ArticleTag => ({
   updatedAt: '2022/12/31',
 });
 
-const factory = (n: number, template: Function) => {
-  return [...new Array(n)].map((_, i) => template(i));
-};
-
-const defaultArgs: TagsProps = {
-  tags: factory(5, templateTag),
+const defaultArgs: TagProps = {
+  tag: templateTag(0),
 };
 
 export default {
-  component: ArticleTags,
-  title: 'Molecules/ArticleTags',
-} as Meta<typeof ArticleTags>;
+  component: ArticleTag,
+  title: 'Molecules/ArticleTag',
+} as Meta<typeof ArticleTag>;
 
-const Template: ComponentStory<typeof ArticleTags> = (args: TagsProps) => (
+const Template: ComponentStory<typeof ArticleTag> = (args: TagProps) => (
   <MemoryRouter initialEntries={['/', 'tag', 'fnuhudhvufj']}>
-    <ArticleTags {...args} />
+    <ArticleTag {...args} />
   </MemoryRouter>
 );
 
