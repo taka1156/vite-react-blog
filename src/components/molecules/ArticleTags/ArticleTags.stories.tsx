@@ -4,7 +4,7 @@ import { ArticleTags, TagsProps } from './ArticleTags';
 
 const templateTag = (i: number): ArticleTag => ({
   id: `dummy-${i}`,
-  name: `duumy${i}`,
+  name: `dummy${i}`,
   img: {
     url: 'http://placehold.jp/150x150.png',
   },

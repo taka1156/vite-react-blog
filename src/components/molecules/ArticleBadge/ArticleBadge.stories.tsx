@@ -5,7 +5,7 @@ import { ArticleBadge, BadgeProps, BadgeType } from './ArticleBadge';
 
 const CategoryArgs: BadgeType = {
   id: 'dummy-id',
-  name: 'duumy',
+  name: 'dummy',
   img: {
     url: 'http://placehold.jp/150x150.png',
   },
@@ -15,7 +15,7 @@ const CategoryArgs: BadgeType = {
 
 const templateTag = (i: number): ArticleTag => ({
   id: `dummy-${i}`,
-  name: `duumy${i}`,
+  name: `dummy${i}`,
   img: {
     url: 'http://placehold.jp/150x150.png',
   },
