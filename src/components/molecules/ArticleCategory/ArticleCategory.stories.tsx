@@ -21,7 +21,7 @@ export default {
 
 const Template: ComponentStory<typeof ArticleCategory> = (
   args: CategoryProps
-) => <MemoryRouter initialEntries={['/', 'category', 'fnuhudhvufj']}><ArticleCategory {...args} /></MemoryRouter>;
+) => <MemoryRouter initialEntries={['/category/fnuhudhvufj']}><ArticleCategory {...args} /></MemoryRouter>;
 
 export const Default = Template.bind({});
 Default.args = { ...defaultArgs };

@@ -9,14 +9,13 @@ export interface TagProps {
 }
 
 export const ArticleTag: React.FC<TagProps> = ({ tag, className = 'flex' }) => {
-  const { name, img } = tag;
-  const { url } = img;
+  const { id } = tag;
 
   return (
     <div className={className}>
       <ArticleBadge
         badge={tag}
-        link={`tag/${tag.id}`}
+        link={`/tag/${id}`}
         outlined={true}
       />
     </div>

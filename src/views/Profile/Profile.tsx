@@ -1,7 +1,7 @@
 import { BaseHeading } from '@/components/atoms/BaseHeading/BaseHeading';
 import logo from '@/assets/logo.svg';
 
-export const Profile: React.VFC = () => {
+export const Profile: React.FC = () => {
   return (
     <main className="content-center mx-auto">
       <BaseHeading hLv={1} underlined={true} text="Profle" />

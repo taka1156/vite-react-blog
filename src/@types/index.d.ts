@@ -35,7 +35,7 @@ type Article = ArticleDate & {
 
 
 type MicroCMSResult = {
-  comments: Article[];
+  contents: Article[];
   totalCount: number;
   offset: number;
   limit: number;

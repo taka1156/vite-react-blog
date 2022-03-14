@@ -31,7 +31,7 @@ export default {
 } as Meta<typeof ArticleBadge>;
 
 const Template: ComponentStory<typeof ArticleBadge> = (args: BadgeProps) => (
-  <MemoryRouter initialEntries={['/', 'category', 'fnuhudhvufj']}>
+  <MemoryRouter initialEntries={['/category/fnuhudhvufj']}>
     <ArticleBadge {...args} />
   </MemoryRouter>
 );
@@ -40,4 +40,4 @@ export const Category = Template.bind({});
 Category.args = { badge: CategoryArgs, link: `category/${CategoryArgs.id}`, outlined: false };
 
 export const Tags = Template.bind({});
-Tags.args = { badge: TagArgs, link: `tag/${TagArgs.id}` ,outlined: true };
+Tags.args = { badge: TagArgs, link: `/tag/${TagArgs.id}` ,outlined: true };

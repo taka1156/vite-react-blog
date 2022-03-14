@@ -20,7 +20,7 @@ export const ArticleBadge: React.FC<BadgeProps> = ({
 }) => {
   const badgeClass = classNames(
     outlined
-      ? 'bg-white border-2 border-blue-500 text-blue-500'
+      ? 'bg-white border border-blue-500 text-blue-500'
       : 'bg-blue-700 text-white',
     'px-2 rounded-full hover:opacity-70',
     className
@@ -39,7 +39,7 @@ export const ArticleBadge: React.FC<BadgeProps> = ({
               <BaseImg
                 img={url}
                 alt={`${name}のロゴ`}
-                size={'sm'}
+                size="sm"
                 className="p-1"
               />
             </>

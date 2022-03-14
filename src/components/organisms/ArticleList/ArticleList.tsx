@@ -4,7 +4,7 @@ export interface ListProps {
   articleList: Article[];
 };
 
-export const ArticleList: React.VFC<ListProps> = ({ articleList }) => {
+export const ArticleList: React.FC<ListProps> = ({ articleList }) => {
   return (
     <>
       {articleList.map((article) => (

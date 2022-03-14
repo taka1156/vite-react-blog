@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { ArticleTag } from '@/components/molecules/ArticleTag/ArticleTag';
 
 export interface TagsProps {
@@ -6,8 +7,9 @@ export interface TagsProps {
 }
 
 export const ArticleTags: React.FC<TagsProps> = ({ tags, className = '' }) => {
+  const tagsStyle = classNames('flex flex-wrap', className);
   return (
-    <div className={'flex flex-wrap ' + className}>
+    <div className={tagsStyle}>
       {tags.map((tag) => (
         <ArticleTag tag={tag} className='m-1' />
       ))}

@@ -6,7 +6,7 @@ export interface BodyProps {
   body: string;
 }
 
-export const ArticleBody: React.VFC<BodyProps> = ({ body }) => {
+export const ArticleBody: React.FC<BodyProps> = ({ body }) => {
   const html = marked(body);
   return (
     <div className="w-4/5 md:w-full">

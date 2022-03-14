@@ -24,5 +24,3 @@ export const vitePluginVisualizer = (config: PluginVisualizerOptions = defaultCo
   config: (_, {mode}) => resolveVisualizerConfig(mode, modeName, config),
   apply: 'build',
 });
-
-export type PluginVisualizerOptions = PluginVisualizerOptions;

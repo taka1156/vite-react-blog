@@ -13,7 +13,7 @@ export const ArticleCategory: React.FC<CategoryProps> = ({
 
   return (
     <div className={className}>
-      <ArticleBadge badge={category} link={`category/${id}`} outlined={false} />
+      <ArticleBadge badge={category} link={`/category/${id}`} outlined={false} />
     </div>
   );
 };

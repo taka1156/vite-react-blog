@@ -5,7 +5,7 @@ export interface TextProps {
   className?: string;
 }
 
-export const BaseText: React.VFC<TextProps> = ({ text, className='' }) => {
-  const style = classNames('text-xl', className);
-  return <p className={style}>{text}</p>;
+export const BaseText: React.FC<TextProps> = ({ text, className='' }) => {
+  const textClass = classNames('text-xl', className);
+  return <p className={textClass}>{text}</p>;
 };

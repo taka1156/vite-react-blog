@@ -21,6 +21,6 @@ const imgSizeStyle = (size: ImgSize) => {
 };
 
 export const BaseImg: React.FC<ImgProps> = ({ img, alt, size = 'sm', className = '' }) => {
-  const style = classNames(imgSizeStyle(size), className);
-  return <img src={img} alt={alt} className={style} />;
+  const imgClass = classNames(imgSizeStyle(size), className);
+  return <img src={img} alt={alt} className={imgClass} />;
 };

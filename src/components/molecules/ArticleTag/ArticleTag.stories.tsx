@@ -22,7 +22,7 @@ export default {
 } as Meta<typeof ArticleTag>;
 
 const Template: ComponentStory<typeof ArticleTag> = (args: TagProps) => (
-  <MemoryRouter initialEntries={['/', 'tag', 'fnuhudhvufj']}>
+  <MemoryRouter initialEntries={['/tag/fnuhudhvufj']}>
     <ArticleTag {...args} />
   </MemoryRouter>
 );

@@ -23,7 +23,7 @@ export const ArticleHeader: React.FC<HeaderProps> = ({ article }) => {
               className="text-xl text-blue-500 hover:opacity-70"
             />
           }
-          link={`article/${id}`}
+          link={`/article/${id}`}
         ></BaseLink>
 
         <BaseText text={summary} className="text-sm" />

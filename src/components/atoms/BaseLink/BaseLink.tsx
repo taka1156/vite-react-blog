@@ -7,19 +7,18 @@ export interface LinkProps {
   className?: string;
 }
 
-export const BaseLink: React.VFC<LinkProps> = ({ cp, link, className='' }) => {
-  const style = classNames(className);
+export const BaseLink: React.FC<LinkProps> = ({ cp, link, className='' }) => {
+  const linkClass = classNames(className);
 
   if (link.indexOf('http') !== -1) {
     return (
-      <a href={link} className={style}>
+      <a href={link} className={linkClass}>
         {cp}
       </a>
     );
   } else {
-    const location = useLocation();
     return (
-      <Link to={`${location.pathname}/${link}`} className={style}>
+      <Link to={link} className={linkClass}>
         {cp}
       </Link>
     );
