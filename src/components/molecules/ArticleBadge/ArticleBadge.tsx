@@ -16,7 +16,7 @@ export const ArticleBadge: React.FC<BadgeProps> = ({
   badge,
   link,
   outlined = false,
-  className = 'flex justify-center',
+  className = 'flex justify-self-center items-center',
 }) => {
   const badgeClass = classNames(
     outlined
@@ -30,23 +30,16 @@ export const ArticleBadge: React.FC<BadgeProps> = ({
   const { url } = img;
 
   return (
-    <BaseLink
-      cp={
-        <div className={badgeClass}>
-          {
-            <>
-              <BaseText text={name} className="p-1" />
-              <BaseImg
-                img={url}
-                alt={`${name}のロゴ`}
-                size="sm"
-                className="p-1"
-              />
-            </>
-          }
-        </div>
-      }
-      link={link}
-    />
+    <BaseLink link={link}>
+      <div className={badgeClass}>
+        <BaseText text={name} className="text-xs" />
+        <BaseImg
+          img={url}
+          alt={`${name}のロゴ`}
+          size="sm"
+          className="m-0 p-1.5"
+        />
+      </div>
+    </BaseLink>
   );
 };

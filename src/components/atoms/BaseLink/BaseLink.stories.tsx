@@ -2,7 +2,6 @@ import { Meta, ComponentStory } from '@storybook/react';
 import { BaseLink, LinkProps } from './BaseLink';
 
 const defaultArgs: LinkProps = {
- cp: (<>SampleLink</>),
  link: 'https://example.com'
 };
 
@@ -12,7 +11,7 @@ export default {
 } as Meta<typeof BaseLink>;
 
 const Template: ComponentStory<typeof BaseLink> = (args: LinkProps) => (
-  <BaseLink {...args} />
+  <BaseLink {...args}>dummyLink</BaseLink>
 );
 
 export const Default = Template.bind({});

@@ -9,7 +9,7 @@ export interface BodyProps {
 export const ArticleBody: React.FC<BodyProps> = ({ body }) => {
   const html = marked(body);
   return (
-    <div className="w-4/5 md:w-full">
+    <div className="bg-gray-500 my-4 w-4/5 md:w-full">
       <div
         dangerouslySetInnerHTML={{ __html: html }}
         className="markdown-body"

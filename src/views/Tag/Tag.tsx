@@ -1,18 +1,35 @@
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getArticles } from '@/api';
 import { BaseHeading } from '@/components/atoms/BaseHeading/BaseHeading';
-import logo from '@/assets/logo.svg';
+import { ArticleList } from '@/components/organisms/ArticleList/ArticleList';
 
 export const Tag: React.FC = () => {
+  const [articleList, setArticleList] = useState<MicroCMSArticleResult>();
+  const [pageInfo, setPageInfo] = useState<PageInfo>();
+  const [pageIndex, setPageIndex] = useState<number>(0);
+  const { tagId, page } = useParams<{ tagId: string; page: string }>();
+
+  useEffect(() => {
+    setPageIndex(parseInt(page!) || 1);
+    getArticles(pageIndex - 1, `tags[contains]${tagId}`).then((result) => setArticleList(result!));
+
+    setPageInfo({
+      current: pageIndex,
+      maxPage: parseInt(articleList?.totalCount!) / 5 || 0,
+      pageKind: '',
+    });
+  }, [articleList]);
+
   return (
-    <main className="content-center mx-auto">
-      <BaseHeading hLv={1} underlined={true} text="Tag" />
-      <div className="px-4 py-4 font-extrabold">
-        <img
-          src={logo}
-          className="mx-auto w-1/4 h-1/4 animate-spin-logo"
-          alt="logo"
-        />
-        <p className="text-center my-5 text-4xl text-blue-500">Tag</p>
-      </div>
+    <main className="mx-auto md:w-3/5">
+      <BaseHeading
+        hLv={1}
+        underlined={true}
+        text={}
+        className="text-3xl flex justify-center items-center my-3"
+      />
+      <ArticleList pageInfo={pageInfo!} articleList={articleList?.contents!} />
     </main>
   );
 };

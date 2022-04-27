@@ -11,7 +11,7 @@ export interface BtnProps {
   size: BtnSize;
 }
 
-const btnSizeStyle = (btnSize: BtnSize) => {
+const btnSizeClass = (btnSize: BtnSize) => {
   switch(btnSize) {
     case 'sm':
       return 'py-2 px-6 text-base';
@@ -31,7 +31,7 @@ export const BaseBtn: React.FC<BtnProps> = ({
   size = 'md'
 }) => {
   const btnClass = classNames(
-    btnSizeStyle(size),
+    btnSizeClass(size),
     outlined ? 'bg-white border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white' : 'bg-blue-700 text-white hover:border-2 hover:border-blue-500 hover:bg-white hover:text-blue-500',
     rounded ? 'rounded-full' : 'rounded'
   );

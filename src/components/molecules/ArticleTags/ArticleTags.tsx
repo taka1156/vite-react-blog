@@ -7,11 +7,11 @@ export interface TagsProps {
 }
 
 export const ArticleTags: React.FC<TagsProps> = ({ tags, className = '' }) => {
-  const tagsStyle = classNames('flex flex-wrap', className);
+  const tagsClass = classNames('flex flex-wrap', className);
   return (
-    <div className={tagsStyle}>
+    <div className={tagsClass}>
       {tags.map((tag) => (
-        <ArticleTag tag={tag} className='m-1' />
+        <ArticleTag key={tag.id} tag={tag} className='m-0.5' />
       ))}
     </div>
   );
